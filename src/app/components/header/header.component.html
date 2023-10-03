@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">MyMoney</a>
+    <a class="navbar-brand" routerLink="home">MyMoney</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,25 +14,31 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
+      
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="home"
-            >Home</a
+          <a class="nav-link" routerLink="expenses" routerLinkActive="active"
+            >Gastos</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="expenses">Gastos</a>
+          <a class="nav-link" routerLink="incomes" routerLinkActive="active"
+            >Ingresos</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="incomes">Ingresos</a>
+          <a class="nav-link" routerLink="options" routerLinkActive="active"
+            >Opciones</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="options">Opciones</a>
+          <a class="nav-link" routerLink="new-expense" routerLinkActive="active"
+            >Añadir gasto</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="new-expense">Añadir gasto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="new-income">Añadir ingreso</a>
+          <a class="nav-link" routerLink="new-income" routerLinkActive="active"
+            >Añadir ingreso</a
+          >
         </li>
       </ul>
     </div>
