@@ -13,6 +13,9 @@ import { EditExpenseComponent } from './pages/edit-expense/edit-expense.componen
 import { HeaderComponent } from './components/header/header.component';
 import { NewExpenseComponent } from './pages/new-expense/new-expense.component';
 import { NewIncomeComponent } from './pages/new-income/new-income.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { NewIncomeComponent } from './pages/new-income/new-income.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
